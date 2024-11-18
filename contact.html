@@ -20,8 +20,13 @@
                 event.preventDefault();
                 emailjs.sendForm('contact_service', 'contact_form', this)
                     .then(() => {
+                        window.location.href = 'success.html';
+                        //statusMessage.textContent = 'Message sent successfully!'; // Success message
+                        //statusMessage.style.color = 'green'; // Optional styling for the message
                         console.log('SUCCESS!');
                     }, (error) => {
+                        //statusMessage.textContent = 'Failed to send message. Please try again.'; // Error message
+                        //statusMessage.style.color = 'red'; // Optional styling for the error
                         console.log('FAILED...', error);
                     });
             });
@@ -37,14 +42,16 @@
         </ul>
     </nav>
     <form id="contact-form">
-        <input type="hidden" name="contact_number" value="697483">
-        <label>Name</label>
-        <input type="text" name="user_name">
-        <label>Email</label>
-        <input type="email" name="user_email">
-        <label>Message</label>
-        <textarea name="message"></textarea>
-        <input type="submit" value="Send">
+        <form id="contact-form">
+            <input type="hidden" name="contact_number" value="697483">
+            <label for="user_name">Name</label>
+            <input type="text" id="user_name" name="user_name" required>
+            <label for="user_email">Email</label>
+            <input type="email" id="user_email" name="user_email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </form>
     <footer>
         <h1>2024 © sync-link.</h1>
