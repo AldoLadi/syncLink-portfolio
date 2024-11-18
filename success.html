@@ -3,37 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Sent</title>
+    <title>Success</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-        p {
-            font-size: 1.2em;
-            color: #555;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
+/* General styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0f4c75, #1e3c72, #2a5298); /* Blue gradient */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Full height of the viewport */
+}
+
+/* Header styling */
+header {
+    background-color: #000; /* Black background */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #4CAF50;
+}
+
+/* Navigation styling */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Success message styling */
+.success-message {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #333; /* Dark background for success message */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.success-message h2 {
+    color: #4CAF50; /* Success color */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #000; /* Black footer background */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0; /* Thinner footer */
+    margin-top: auto; /* Ensures footer is pushed to the bottom */
+}
+
     </style>
 </head>
 <body>
-    <div>
-        <h1>Message Sent!</h1>
-        <p>Thank you for reaching out. We will get back to you soon.</p>
-        <p><a href="index.html">Return to Home</a></p>
+    <!-- Header Section -->
+    <header>
+        <h1>Sync-Link</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Success Message -->
+    <div class="success-message">
+        <h2>Your message has been sent successfully!</h2>
+        <p>Thank you for contacting us. We will get back to you soon.</p>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>2024 © Sync-Link.</p>
+        <p>Built and designed by the Sync-Link team in Sønderborg.</p>
+    </footer>
 </body>
 </html>
+
